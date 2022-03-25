@@ -1,0 +1,23 @@
+#rabbitmq settings
+spring:
+  rabbitmq:
+    host: localhost
+    password: guest
+    port: 15672
+    username: guest
+    template:
+      exchange: direct.exchange
+      default-receive-queue: email.q
+      routing-key: email.key
+#application port
+server:
+  port: 8081
+#logger
+logging:
+  level:
+    root: debug
+    
+   
+     
+    
+    
