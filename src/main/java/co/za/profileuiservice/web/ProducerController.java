@@ -2,6 +2,7 @@ package co.za.profileuiservice.web;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ public class ProducerController {
 	private final ProducerServiceImpl producerServiceImpl;
 	
 	@PostMapping("send/message")
-	public ResponseEntity<ProfileEmailDTO>sendMessage(@RequestBody ProfileEmailDTO emailDTO){
+	public ResponseEntity<ProfileEmailDTO>sendMessage(@Validated@RequestBody ProfileEmailDTO emailDTO){
 		   log.info("input message " + emailDTO);
 		   emailDTO = producerServiceImpl.sendEmailMessageToQueue(emailDTO);
 		   if(emailDTO != null) {
