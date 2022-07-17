@@ -17,8 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Slf4j
 public class ProducerController {
-	
-	
+
 	private final ProducerServiceImpl producerServiceImpl;
 	
 	@PostMapping("send/message")
@@ -31,6 +30,5 @@ public class ProducerController {
 		   }
 		   return null;
 	}
-	
 
 }

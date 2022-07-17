@@ -16,6 +16,14 @@ server:
 logging:
   level:
     root: debug
+
+#keycloak
+keycloak:
+  auth-server-url: http://localhost:8089
+  realm: my-profile-realm
+  resource: profile-ui-service
+  ssl-required: external
+  use-resource-role-mappings: true
     
    
      

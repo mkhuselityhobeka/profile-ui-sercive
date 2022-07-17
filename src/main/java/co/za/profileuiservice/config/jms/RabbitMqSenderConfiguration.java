@@ -1,4 +1,4 @@
-package co.za.profileuiservice.config;
+package co.za.profileuiservice.config.jms;
 
 
 import org.springframework.amqp.core.Binding;
@@ -15,12 +15,9 @@ import org.springframework.context.annotation.Configuration;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
-
 @Configuration
 @Getter@Setter
-public class RabbitMqSenderConfig {
+public class RabbitMqSenderConfiguration {
 	
 	@Value("${spring.rabbitmq.host}")
 	private String host;

@@ -18,7 +18,6 @@ import lombok.ToString;
 @Component
 public class ProfileEmailDTO {
 
-	 
 	@NotBlank
 	@NotEmpty(message = "Please fill in name field, name cannot be empty")
 	private String name;

@@ -1,24 +1,17 @@
-package co.za.profileuiservice.data;
+package co.za.profileuiservice.data.errorResponse;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 
-
-
-
 public class ErrorResponse {
-	
-
 	
 	private LocalDateTime timestamp ;
 	private String message;
 	private List<String>details;
 	
-	public ErrorResponse() {
-		
-	}
+	public ErrorResponse() {}
 	public ErrorResponse(String message, List<String> details, LocalDateTime timestamp) {
 		super();
 		this.message = message;
@@ -28,7 +21,6 @@ public class ErrorResponse {
 		timestamp.format(dateTimeFormatter);
 	}
 
-	
 	public String getMessage() {
 		return message;
 	}
@@ -46,7 +38,6 @@ public class ErrorResponse {
 		return timestamp;
 	}
 
-
 	public void setTimestamp(LocalDateTime timestamp) {
 		
 		this.timestamp = LocalDateTime.now();
@@ -55,12 +46,10 @@ public class ErrorResponse {
 			
 	}
 
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(details, message, timestamp);
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -74,7 +63,6 @@ public class ErrorResponse {
 		return Objects.equals(details, other.details) && Objects.equals(message, other.message)
 				&& Objects.equals(timestamp, other.timestamp);
 	}
-
 
 	@Override
 	public String toString() {
