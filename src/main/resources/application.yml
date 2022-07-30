@@ -24,6 +24,11 @@ keycloak:
   resource: profile-ui-service
   ssl-required: external
   use-resource-role-mappings: true
+
+
+#auth crede
+
+
     
    
      
